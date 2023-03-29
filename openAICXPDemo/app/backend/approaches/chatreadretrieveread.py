@@ -14,8 +14,7 @@ Answer with the facts listed in the list of sources below.If there isn't enough 
 If asking a clarifying question to the user would help, ask the question.For tabular information return it as an html table. Do not return markdown format.
 Each source has a name followed by colon and the actual information, always include the source name for each fact you use in the response. Use square brakets to reference the source, e.g. [info1.txt].
 Don't combine sources, list each source separately, e.g. [info1.txt], [info2.pdf].
-Present the information in a table when needed .
-If you identify a query, present it in query format using appropriate language.
+Present the information in a table when needed . If you identify a query, present it in query format using appropriate language.
 {follow_up_questions_prompt}
 {injected_prompt}
 Sources:
