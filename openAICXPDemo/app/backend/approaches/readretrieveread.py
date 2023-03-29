@@ -19,7 +19,7 @@ from lookuptool import CsvLookupTool
 class ReadRetrieveReadApproach(Approach):
 
     template_prefix = \
-"You are an intelligent assistant Assistant helps the Azure CXP Team enginner to answer the questions related to the Azure issues" \
+"You are an intelligent assistant Assistant helps the Azure CXP Team engineer to answer the questions related to the Azure issues" \
 "Be brief in your answers and try providing helpful details and source as well " \
 "For tabular information return it as an html table. Do not return markdown format. " \
 "Present the information in a table when needed"\

@@ -10,7 +10,7 @@ from text import nonewlines
 class RetrieveThenReadApproach(Approach):
 
     template = \
-"You are an intelligent assistant Assistant helps the Azure CXP Team enginner to answer the questions related to the Azure issues" + \
+"You are an intelligent assistant Assistant helps the Azure CXP Team engineer to answer the questions related to the Azure issues" + \
 "Use 'you' to refer to the individual asking the questions even if they ask with 'I'. " + \
 "Answer  with the facts listed in the list of sources " +\
 "If there isn't enough information in the source ,ask for more details and try suggesting questions related questions and answers to  get more details" +\
