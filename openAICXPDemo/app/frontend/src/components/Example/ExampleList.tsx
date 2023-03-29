@@ -9,11 +9,12 @@ export type ExampleModel = {
 
 const EXAMPLES: ExampleModel[] = [
     {
-        text: "What is included in my Northwind Health Plus plan that is not in standard?",
-        value: "What is included in my Northwind Health Plus plan that is not in standard?"
+        text: "Kusto Queries to troubleshoot CDC?",
+        value: "Kusto Queries to troubleshoot CDC?"
     },
-    { text: "What happens in a performance review?", value: "What happens in a performance review?" },
-    { text: "What does a Product Manager do?", value: "What does a Product Manager do?" }
+    { text: "Black Screen on RDP?", value: "What happens in a performance review?" },
+    { text: "CAS Commands for MySQL?", value: "CAS Commands for MySQL?" },
+    {text: "Troubleshoot Blocking in SQL DB", value: "Troubleshoot Blocking in SQL DB"}
 ];
 
 interface Props {
