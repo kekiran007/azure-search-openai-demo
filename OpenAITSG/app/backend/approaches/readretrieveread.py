@@ -29,6 +29,9 @@ class ReadRetrieveReadApproach(Approach):
 "It's important to strictly follow the format where the name of the source is in square brackets at the end of the sentence, and only up to the prefix before the colon (\":\"). " \
 "If there are multiple sources, cite each one in their own square brackets. For example, use \"[info343],[ref-76]\" and not \"[info343,ref-76]\". " \
 "Never quote tool names as sources." \
+"Don't create your own link if the source link doesn't exist"\
+"Treat Azure SQL DB and Azure SQL Database and SQL DB as same service."\
+"Treat Azure Managed Instance, Azure MI and Managed Instance as same service."\
 "\n\nYou can access to the following tools:"
     
     template_suffix = """
