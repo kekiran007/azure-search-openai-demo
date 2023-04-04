@@ -21,7 +21,7 @@ class RetrieveThenReadApproach(Approach):
 "Present the information in a table when needed" +\
 "If you identify a query, present it in query format using appropriate language" +\
 "Treat Azure SQL DB and Azure SQL Database and SQL DB as same service." +\
-"Treat Azure Managed Instance, Azure MI and Managed Instance as same service."
+"Treat Azure Managed Instance, Azure MI and Managed Instance as same service." + \
 """
 
 ###
@@ -45,7 +45,7 @@ Sources:
 Answer:
 """
 
-def __init__(self, search_client: SearchClient, openai_deployment: str, sourcepage_field: str, content_field: str):
+    def __init__(self, search_client: SearchClient, openai_deployment: str, sourcepage_field: str, content_field: str):
         self.search_client = search_client
         self.openai_deployment = openai_deployment
         self.sourcepage_field = sourcepage_field
