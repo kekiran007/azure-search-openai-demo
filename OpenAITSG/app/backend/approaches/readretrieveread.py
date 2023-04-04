@@ -41,15 +41,15 @@ Question: {input}
 
 Thought: {agent_scratchpad}"""    
 
-    CognitiveSearchToolDescription = "useful for searching the Torublesooting guide and steps for Azure issues"
+CognitiveSearchToolDescription = "useful for searching the Microsoft employee benefits information such as healthcare plans, retirement plans, etc."
 
-    def __init__(self, search_client: SearchClient, openai_deployment: str, sourcepage_field: str, content_field: str):
+def __init__(self, search_client: SearchClient, openai_deployment: str, sourcepage_field: str, content_field: str):
         self.search_client = search_client
         self.openai_deployment = openai_deployment
         self.sourcepage_field = sourcepage_field
         self.content_field = content_field
 
-    def retrieve(self, q: str, overrides: dict) -> any:
+def retrieve(self, q: str, overrides: dict) -> any:
         use_semantic_captions = True if overrides.get("semantic_captions") else False
         top = overrides.get("top") or 3
         exclude_category = overrides.get("exclude_category") or None
@@ -73,7 +73,7 @@ Thought: {agent_scratchpad}"""
         content = "\n".join(self.results)
         return content
         
-    def run(self, q: str, overrides: dict) -> any:
+def run(self, q: str, overrides: dict) -> any:
         # Not great to keep this as instance state, won't work with interleaving (e.g. if using async), but keeps the example simple
         self.results = None
 
@@ -114,3 +114,4 @@ class EmployeeInfoTool(CsvLookupTool):
 
     def employee_info(self, unused: str) -> str:
         return self.lookup(self.employee_name)
+        
