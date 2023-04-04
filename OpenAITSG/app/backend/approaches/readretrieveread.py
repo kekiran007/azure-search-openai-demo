@@ -31,7 +31,7 @@ class ReadRetrieveReadApproach(Approach):
 "Never quote tool names as sources." \
 "If you cannot answer using the sources below, Ask for the follow up question to make it more clear . " \
 "Treat Azure SQL DB and Azure SQL Database and SQL DB as same service."\
-"Treat Azure Managed Instance, Azure MI and Managed Instance as same service."
+"Treat Azure Managed Instance, Azure MI and Managed Instance as same service."\
 "\n\nYou can access to the following tools:"
     
 template_suffix = """
@@ -41,9 +41,9 @@ Question: {input}
 
 Thought: {agent_scratchpad}"""    
 
-CognitiveSearchToolDescription = "useful for searching the Torublesooting guide and steps for Azure issues"
+    CognitiveSearchToolDescription = "useful for searching the Torublesooting guide and steps for Azure issues"
 
- def __init__(self, search_client: SearchClient, openai_deployment: str, sourcepage_field: str, content_field: str):
+    def __init__(self, search_client: SearchClient, openai_deployment: str, sourcepage_field: str, content_field: str):
         self.search_client = search_client
         self.openai_deployment = openai_deployment
         self.sourcepage_field = sourcepage_field
