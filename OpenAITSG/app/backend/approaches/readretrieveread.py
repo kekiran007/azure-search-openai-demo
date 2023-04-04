@@ -19,7 +19,7 @@ from lookuptool import CsvLookupTool
 class ReadRetrieveReadApproach(Approach):
 
     template_prefix = \
-"You are an intelligent assistant Assistant helps the Azure CXP Team enginner to answer the questions related to the Azure issues" \
+"You are an intelligent assistant Assistant helps the Azure CXP Team engineer to answer the questions related to the Azure issues" \
 "Be brief in your answers and try providing helpful details and source as well " \
 "For tabular information return it as an html table. Do not return markdown format. " \
 "Present the information in a table when needed"\
@@ -29,27 +29,25 @@ class ReadRetrieveReadApproach(Approach):
 "It's important to strictly follow the format where the name of the source is in square brackets at the end of the sentence, and only up to the prefix before the colon (\":\"). " \
 "If there are multiple sources, cite each one in their own square brackets. For example, use \"[info343],[ref-76]\" and not \"[info343,ref-76]\". " \
 "Never quote tool names as sources." \
-"If you cannot answer using the sources below, Ask for the follow up question to make it more clear . " \
-"Treat Azure SQL DB and Azure SQL Database and SQL DB as same service."\
-"Treat Azure Managed Instance, Azure MI and Managed Instance as same service."\
+"If you cannot answer using the sources , Ask for the follow up question to make it more clear . " \
 "\n\nYou can access to the following tools:"
     
-template_suffix = """
+    template_suffix = """
 Begin!
 
 Question: {input}
 
 Thought: {agent_scratchpad}"""    
 
-CognitiveSearchToolDescription = "useful for searching the Microsoft employee benefits information such as healthcare plans, retirement plans, etc."
+    CognitiveSearchToolDescription = "useful for searching the Torublesooting guide and steps for Azure issues"
 
-def __init__(self, search_client: SearchClient, openai_deployment: str, sourcepage_field: str, content_field: str):
+    def __init__(self, search_client: SearchClient, openai_deployment: str, sourcepage_field: str, content_field: str):
         self.search_client = search_client
         self.openai_deployment = openai_deployment
         self.sourcepage_field = sourcepage_field
         self.content_field = content_field
 
-def retrieve(self, q: str, overrides: dict) -> any:
+    def retrieve(self, q: str, overrides: dict) -> any:
         use_semantic_captions = True if overrides.get("semantic_captions") else False
         top = overrides.get("top") or 3
         exclude_category = overrides.get("exclude_category") or None
@@ -73,7 +71,7 @@ def retrieve(self, q: str, overrides: dict) -> any:
         content = "\n".join(self.results)
         return content
         
-def run(self, q: str, overrides: dict) -> any:
+    def run(self, q: str, overrides: dict) -> any:
         # Not great to keep this as instance state, won't work with interleaving (e.g. if using async), but keeps the example simple
         self.results = None
 
@@ -114,4 +112,3 @@ class EmployeeInfoTool(CsvLookupTool):
 
     def employee_info(self, unused: str) -> str:
         return self.lookup(self.employee_name)
-        
