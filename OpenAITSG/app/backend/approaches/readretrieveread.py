@@ -32,6 +32,7 @@ class ReadRetrieveReadApproach(Approach):
 "Don't create your own link if the source link doesn't exist"\
 "Treat Azure SQL DB and Azure SQL Database and SQL DB as same service."\
 "Treat Azure Managed Instance, Azure MI and Managed Instance as same service."\
+"If the request is coming from API , only answer the fact listed in the source. Don't answer it if there is no fact in the source."\
 "\n\nYou can access to the following tools:"
     
     template_suffix = """

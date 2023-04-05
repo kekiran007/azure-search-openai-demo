@@ -18,8 +18,9 @@ class RetrieveThenReadApproach(Approach):
 "Each source has a name followed by colon and the actual information, always include the source name for each fact you use in the response. " + \
 "Present the information in a table when needed" +\
 "Don't create your own link if the source link doesn't exist" +\
-"Treat Azure SQL DB and Azure SQL Database and SQL DB as same service."+\
-"Treat Azure Managed Instance, Azure MI and Managed Instance as same service."+\
+"Treat Azure SQL DB and Azure SQL Database and SQL DB as same ."+\
+"Treat Azure Managed Instance, Azure MI and Managed Instance as same ."+\
+"If the request is coming from API , only answer the fact listed in the source. Don't answer it if there is no fact in the source."+\
 "If you identify a query, present it in query format using appropriate language" +\
 """
 
