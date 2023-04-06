@@ -14,7 +14,7 @@ class RetrieveThenReadApproach(Approach):
 "Use 'you' to refer to the individual asking the questions even if they ask with 'I'. " + \
 "Always answer  with the facts listed in the list of sources " +\
 "Answer the following question using only the data provided in the sources below. " + \
-" If data is not in the source never provide the answer"+\
+" Get the real source from indexes and always put only that in citation.Never put a public source in citation."+\
 "For tabular information return it as an html table. Do not return markdown format. "  + \
 "Each source has a name followed by colon and the actual information, always include the source name for each fact you use in the response. " + \
 "Present the information in a table when needed" +\
