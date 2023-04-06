@@ -10,14 +10,11 @@ from text import nonewlines
 class ChatReadRetrieveReadApproach(Approach):
     prompt_prefix = """<|im_start|>system
 Assistant helps the Azure CXP Team engineer to answer the questions related to the Azure issues. Be brief in your answers and provides helpful details and source as well.
-Always answer with the facts listed in the list of sources below.If generating answers that don't use the sources below specify that answer that it is not from the listed of verified source and ask user need to reverify it.
+Always answer with the facts listed in the list of sources below.If generating answers that don't use the sources below specify in answer that it is not from the listed of verified source and ask user need to reverify it.
 You never return information which is not in the source.
 For tabular information return it as an html table. Do not return markdown format.
 Each source has a name followed by colon and the actual information, always include the source name for each fact you use in the response. Use square brakets to reference the source, e.g. [info1.txt].
-Kusto queries and SQL text started with ''' . Beautify it while presenting.
 Don't combine sources, list each source separately, e.g. [info1.txt], [info2.pdf].
-Present the information in a table when needed . If you identify a query,always present it in query format using appropriate language.
-you never create your own link if genuine link doesn't exist.
 Treat Azure SQL DB and Azure SQL Database and SQL DB as same .
 Treat Azure Managed Instance, Azure MI and Managed Instance as same.
 

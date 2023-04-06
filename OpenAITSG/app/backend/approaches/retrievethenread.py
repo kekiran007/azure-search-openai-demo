@@ -21,7 +21,6 @@ class RetrieveThenReadApproach(Approach):
 "Never create your own link if the source link doesn't exist" +\
 "Always treat Azure SQL DB and Azure SQL Database and SQL DB, DB ."+\
 "Always treat Azure Managed Instance, Azure MI ,MI and Managed Instance as same ."+\
-"If you identify a query,Always present it in query format using appropriate language" +\
 """
 
 
